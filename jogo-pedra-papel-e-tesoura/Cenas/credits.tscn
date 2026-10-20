@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://n0fpbtm6hxtv"]
+
+[ext_resource type="Script" uid="uid://d3kdcj1f062lb" path="res://Cenas/credits.gd" id="1_qyf1u"]
+
+[node name="Credits" type="Control" unique_id=75295078]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qyf1u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1391391364]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1159.0
+offset_bottom = 657.0
+bbcode_enabled = true
+text = "[center]
+[b][font_size=36]RPS MON[/font_size][/b]
+
+[font_size=18][color=yellow]Obrigado por jogar![/color][/font_size]
+
+
+[b][font_size=24]EQUIPE DE DESENVOLVIMENTO[/font_size][/b]
+
+[b]Direção do Projeto[/b]
+Sara Lorrany 
+Isaac Samuel
+
+[b]Programação[/b]
+Isaac Samuel
+Sara Lorrany
+
+[b]Arte 2D / 3D[/b]
+Artista Principal
+Modelador 3D
+
+[b]Design de Interface (UI/UX)[/b]
+Seu Nome Aqui
+
+[b]Design de Fases (Level Design)[/b]
+Seu Nome Aqui
+
+
+[b][font_size=24]ÁUDIO E MÚSICA[/font_size][/b]
+
+[b]Trilha Sonora Original[/b]
+Compositor Musical
+
+[b]Efeitos Sonoros (SFX)[/b]
+Designer de Som
+
+
+[b][font_size=24]AGRADECIMENTOS ESPECIAIS[/font_size][/b]
+
+Família e Amigos
+Comunidade Godot Engine
+Testadores da Versão Beta
+
+
+[font_size=14][color=gray]Criado com Godot Engine 4[/color][/font_size]
+[font_size=14][color=gray]2026 - Todos os direitos reservados[/color][/font_size]
+
+
+[font_size=16][color=cyan]Pressione ESC para pular[/color][/font_size]
+[/center]"

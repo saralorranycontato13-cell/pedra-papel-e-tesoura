@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://bcugisln167db"]
 
+[ext_resource type="Texture2D" uid="uid://bvfvms6sufi2u" path="res://sprit_Pokemon/A-delightful-collection-of-Cute-Pokemon-Desktop-Wallpaper-in-HD-showcasing-various-Pokemon-in-cheerful-settings-that-brighten-your-day.jpg" id="1_pveh2"]
+[ext_resource type="Script" uid="uid://x0j5kwrnloet" path="res://Cenas/menu.gd" id="1_u1n12"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1n12"]
+texture = ExtResource("1_pveh2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fapvr"]
+bg_color = Color(0.835163, 0.5533775, 0.30378693, 0.7254902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn64r"]
+bg_color = Color(0.73333335, 0.44705883, 0.21176471, 0.80784315)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bq32"]
+bg_color = Color(0.83905965, 0.53017217, 0.28302187, 0.80784315)
+
 [node name="Menu" type="Control" unique_id=366145069]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +22,63 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u1n12")
+
+[node name="Panel" type="Panel" parent="." unique_id=686235911]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u1n12")
+
+[node name="Label" type="Label" parent="." unique_id=1582647178]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 87.0
+offset_right = 772.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.93729615, 0.60834235, 0.43850183, 1)
+theme_override_colors/font_shadow_color = Color(0.9899115, 0.9910945, 0.9950481, 0)
+theme_override_colors/font_outline_color = Color(0.49756664, 0.3669508, 0.47884345, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 90
+text = "RPS Mon"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1208873595]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 249.0
+offset_right = 657.0
+offset_bottom = 490.0
+theme_override_constants/separation = 14
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=232931284]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.72156864)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_fapvr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yn64r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1bq32")
+text = "Play"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1622257398]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.72156864)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_fapvr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yn64r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1bq32")
+text = "Exit
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=558040949]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.72156864)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_fapvr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yn64r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1bq32")
+text = "Credits"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
