@@ -1,19 +1,29 @@
 [gd_scene format=3 uid="uid://bcugisln167db"]
 
-[ext_resource type="Texture2D" uid="uid://bvfvms6sufi2u" path="res://sprit_Pokemon/A-delightful-collection-of-Cute-Pokemon-Desktop-Wallpaper-in-HD-showcasing-various-Pokemon-in-cheerful-settings-that-brighten-your-day.jpg" id="1_pveh2"]
 [ext_resource type="Script" uid="uid://x0j5kwrnloet" path="res://Cenas/menu.gd" id="1_u1n12"]
+[ext_resource type="FontFile" uid="uid://cradjuiwx1a8j" path="res://sprit_Pokemon/Pokemon Solid.ttf" id="2_vpgfy"]
+[ext_resource type="Texture2D" uid="uid://ml3ngb5kod86" path="res://sprit_Pokemon/8a91d17e-44b6-4d18-a9ef-02cfd86813a8.png" id="3_eheat"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1n12"]
-texture = ExtResource("1_pveh2")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vb4c"]
+
+[sub_resource type="SystemFont" id="SystemFont_8lfl8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fapvr"]
-bg_color = Color(0.835163, 0.5533775, 0.30378693, 0.7254902)
+bg_color = Color(7.2196127e-07, 0.3036349, 0.42312133, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn64r"]
-bg_color = Color(0.73333335, 0.44705883, 0.21176471, 0.80784315)
+bg_color = Color(9.62615e-07, 0.8094094, 0.91155183, 0.80784315)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bq32"]
-bg_color = Color(0.83905965, 0.53017217, 0.28302187, 0.80784315)
+bg_color = Color(1.4439226e-07, 0.22408581, 0.32571867, 0.9607843)
 
 [node name="Menu" type="Control" unique_id=366145069]
 layout_mode = 3
@@ -24,36 +34,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u1n12")
 
+[node name="8a91d17e44b64d18A9Ef02Cfd86813a8" type="Sprite2D" parent="." unique_id=67097472]
+position = Vector2(578.2187, 373)
+scale = Vector2(0.7562255, 0.7507325)
+texture = ExtResource("3_eheat")
+
 [node name="Panel" type="Panel" parent="." unique_id=686235911]
+visible = false
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 647.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_u1n12")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2vb4c")
 
 [node name="Label" type="Label" parent="." unique_id=1582647178]
+visible = false
 layout_mode = 0
 offset_left = 392.0
 offset_top = 87.0
 offset_right = 772.0
 offset_bottom = 211.0
-theme_override_colors/font_color = Color(0.93729615, 0.60834235, 0.43850183, 1)
-theme_override_colors/font_shadow_color = Color(0.9899115, 0.9910945, 0.9950481, 0)
-theme_override_colors/font_outline_color = Color(0.49756664, 0.3669508, 0.47884345, 1)
+theme_override_colors/font_color = Color(0.9330194, 0.9276964, 0.8869449, 1)
+theme_override_colors/font_shadow_color = Color(0.34117648, 0.03529412, 0.19215687, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_vpgfy")
 theme_override_font_sizes/font_size = 90
 text = "RPS Mon"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1208873595]
 layout_mode = 0
-offset_left = 467.0
-offset_top = 249.0
-offset_right = 657.0
-offset_bottom = 490.0
+offset_left = 12.0
+offset_top = 16.0
+offset_right = 199.0
+offset_bottom = 251.0
 theme_override_constants/separation = 14
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=232931284]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = SubResource("SystemFont_8lfl8")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_fapvr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yn64r")
