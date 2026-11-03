@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://3e4mgw7elwp8"]
+
+[ext_resource type="Texture2D" uid="uid://4qvax2a2x7xp" path="res://sprite/Charge-Anim.png" id="1_gf172"]
+[ext_resource type="Texture2D" uid="uid://wrh54hgmwhhm" path="res://sprit_Pokemon/sprite_2.png" id="2_evr6y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl81w"]
+atlas = ExtResource("1_gf172")
+region = Rect2(0, 0, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rgpn"]
+atlas = ExtResource("1_gf172")
+region = Rect2(64, 0, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0nl8"]
+atlas = ExtResource("1_gf172")
+region = Rect2(0, 72, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dtnr"]
+atlas = ExtResource("1_gf172")
+region = Rect2(64, 72, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c33a7"]
+atlas = ExtResource("1_gf172")
+region = Rect2(0, 144, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqxq1"]
+atlas = ExtResource("1_gf172")
+region = Rect2(64, 144, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l08u0"]
+atlas = ExtResource("1_gf172")
+region = Rect2(128, 72, 64, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrb8d"]
+atlas = ExtResource("1_gf172")
+region = Rect2(128, 0, 64, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yn64r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl81w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rgpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0nl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dtnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c33a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqxq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l08u0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrb8d")
+}],
+"loop": 1,
+"name": &"alvo1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bq32"]
+size = Vector2(51, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_055w7"]
+atlas = ExtResource("2_evr6y")
+region = Rect2(0, 0, 20, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otjcf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_055w7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn64r"]
+size = Vector2(44, 44)
+
+[node name="alvo1" type="Area2D" unique_id=934669224]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1358258184]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_yn64r")
+animation = &"alvo1"
+frame = 5
+frame_progress = 0.08943401
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1598109608]
+position = Vector2(-6.5, -12)
+shape = SubResource("RectangleShape2D_1bq32")
+
+[node name="alvo2" type="Area2D" parent="." unique_id=1535308721]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="alvo2" unique_id=1713955345]
+texture_filter = 1
+position = Vector2(46, -12.5)
+scale = Vector2(2.1, 2.0454545)
+sprite_frames = SubResource("SpriteFrames_otjcf")
+frame_progress = 0.39347184
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="alvo2" unique_id=1172673688]
+position = Vector2(47, -13)
+shape = SubResource("RectangleShape2D_yn64r")
+
+[node name="Area2D" type="Area2D" parent="alvo2/CollisionShape2D" unique_id=825480918]

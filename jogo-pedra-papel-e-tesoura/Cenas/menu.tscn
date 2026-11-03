@@ -35,8 +35,8 @@ grow_vertical = 2
 script = ExtResource("1_u1n12")
 
 [node name="8a91d17e44b64d18A9Ef02Cfd86813a8" type="Sprite2D" parent="." unique_id=67097472]
-position = Vector2(578.2187, 373)
-scale = Vector2(0.7562255, 0.7507325)
+position = Vector2(339, 286)
+scale = Vector2(0.5817403, 0.5775147)
 texture = ExtResource("3_eheat")
 
 [node name="Panel" type="Panel" parent="." unique_id=686235911]
